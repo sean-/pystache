@@ -7,7 +7,7 @@ class Loader(object):
 
     def load_template(self, template_name, template_dirs=None, encoding=None, extension=None):
         '''Returns the template string from a file or throws IOError if it non existent'''
-        if None == template_dirs:
+        if template_dirs is None:
             template_dirs = self.template_path
 
         if encoding is not None:
